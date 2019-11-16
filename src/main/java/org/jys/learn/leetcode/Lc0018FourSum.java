@@ -118,9 +118,6 @@ public class Lc0018FourSum {
                 }
             }
             return result;
-
         }
-
     }
-// @lc code=end
 }
