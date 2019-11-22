@@ -40,7 +40,7 @@ package org.jys.learn.leetcode;
  *
  * For the purpose of this problem, we will return 0 when needle is an empty
  * string. This is consistent to C's strstr() and Java's indexOf().
- * 
+ *
  * @author YueSong Jiang
  * @date 2019/11/20
  */
