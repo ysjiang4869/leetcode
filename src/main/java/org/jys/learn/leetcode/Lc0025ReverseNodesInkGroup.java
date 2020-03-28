@@ -46,9 +46,9 @@ import org.jys.learn.leetcode.common.ListNode;
  */
 public class Lc0025ReverseNodesInkGroup {
 
-    class Solution {
-        public ListNode reverseKGroup(ListNode head, int k) {
-
-        }
-    }
+//    class Solution {
+//        public ListNode reverseKGroup(ListNode head, int k) {
+//
+//        }
+//    }
 }
