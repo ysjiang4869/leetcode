@@ -82,7 +82,6 @@ public class Lc0030SubstringWithConcatenationOfAllWords {
                 return ret;
             }
 
-            //TODO words有重复元素怎么办
             Map<String, List<Integer>> wordsMap = new HashMap<>(words.length);
             for (int i = 0; i < words.length; i++) {
                 wordsMap.putIfAbsent(words[i], new ArrayList<>());
