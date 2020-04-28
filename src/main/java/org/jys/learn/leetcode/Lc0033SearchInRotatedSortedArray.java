@@ -45,7 +45,7 @@ package org.jys.learn.leetcode;
 public class Lc0033SearchInRotatedSortedArray {
 
     public static void main(String[] args) {
-        Solution3 solution = new Solution3();
+        Solution2 solution = new Solution2();
         int[] nums = new int[]{4, 5, 6, 7, 0, 1, 2};
         System.out.println(solution.search(nums, 0) == 4);
         System.out.println(solution.search(nums, 3) == -1);
@@ -137,6 +137,7 @@ public class Lc0033SearchInRotatedSortedArray {
             //思路1是查找左边界，第一个小于num[0]的值
             //思路2是查找右边界，即，最后一个递增的值，下一个就是转折点
             //两种思路都行，关键是，在后面取lo和hi分半判断的时候，要注意lo=hi=mid的情况
+            //这里是思路2
             int lo=0,hi=nums.length-1;
             int mid=0;
             while (lo<hi){
@@ -153,13 +154,13 @@ public class Lc0033SearchInRotatedSortedArray {
             //注意：查找左右边界，返回值应该是lo和hi，不是mid，这种情况可能mid!=lo？
             if(target>=nums[0]){
                 //查找左边一半
-                hi=lo;//lo一定是最后一个递增，这个地方没错
+                //hi=hi;//hi一定是最后一个递增，这个地方没错
                 lo=0;
             }else {
                 //查找右边
+                //hi一定是最后一个递增，要取下一个值
+                lo=Math.min(nums.length-1,hi+1);
                 hi=nums.length-1;
-                //lo一定是最后一个递增，要取下一个值
-                lo=Math.min(nums.length-1,lo+1);
 
             }
 
